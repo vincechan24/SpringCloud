@@ -1,0 +1,11 @@
+spring:
+  profiles: dev
+userid: dev-user9005
+server:
+  port: 9005
+---
+spring:
+  profiles: test
+userid: test-user9006
+server:
+  port: 9006

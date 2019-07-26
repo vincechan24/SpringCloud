@@ -22,6 +22,7 @@
         <module>consumer-ribbon</module>
         <module>producer</module>
         <module>producer-jpa</module>
+        <module>microservice</module>
     </modules>
 
     <dependencies>
