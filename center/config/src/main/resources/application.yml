@@ -14,12 +14,20 @@ spring:
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://git.oschina.net/toopoo/config.git
+#          searchPaths: /
   cloud:
-    config:
-      server:
-        git:
-          uri: https://git.oschina.net/toopoo/config.git
-          searchPaths: /
+      config:
+        server:
+          native:
+            searchLocations: D:/git/springcloud/SpringCloud/config-store
+  profiles:
+      active:
+      - native
 
 management:
   endpoints:
