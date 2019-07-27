@@ -1,11 +1,3 @@
-server:
-  port: 8071
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8761}/eureka/
-
 spring:
   application:
     name: bus-server
@@ -14,3 +6,22 @@ spring:
     port: ${RABBIT_MQ_PORT:5672}
     username: ${RABBIT_MQ_USERNAME:guest}
     password: ${RABBIT_MQ_PASSWORD:guest}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8761}/eureka/,http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8762}/eureka/
+
+---
+spring:
+  profiles: server1
+
+server:
+  port: 8071
+
+---
+spring:
+  profiles: server2
+
+server:
+  port: 8072
+

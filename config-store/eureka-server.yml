@@ -1,8 +1,0 @@
-spring:
-  cloud:
-    profile: dev
-
----
-spring:
-  cloud:
-    profile: test

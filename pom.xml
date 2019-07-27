@@ -119,16 +119,16 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
         <!--消息总线-->
-        <!--rabbitmq
+        <!--rabbitmq-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>-->
-        <!--kafka-->
+        </dependency>
+        <!--kafka
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-kafka</artifactId>
-        </dependency>
+        </dependency>-->
         <!--热加载-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,11 +1,18 @@
 spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:guest}
+    password: ${RABBIT_MQ_PASSWORD:guest}
+---
+spring:
   profiles: dev
-userid: dev-user9005
+userid: dev-userid
 server:
   port: 9005
 ---
 spring:
   profiles: test
-userid: test-user9006
+userid: test-userid
 server:
   port: 9006

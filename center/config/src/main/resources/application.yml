@@ -1,10 +1,10 @@
 server:
-  port: 8888
+  port: 8887
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8761}/eureka/
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8761}/eureka/,http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:8762}/eureka/
 
 spring:
   application:
@@ -24,7 +24,10 @@ spring:
       config:
         server:
           native:
-            searchLocations: D:/git/springcloud/SpringCloud/config-store
+          #mac
+            search-locations: /Users/chan/Documents/chan/github/SpringCloud/config-store
+          #windows
+#            searchLocations: D:/git/springcloud/SpringCloud/config-store
   profiles:
       active:
       - native

@@ -1,18 +1,16 @@
 spring:
   application:
-    name: microservice
+    name: eureka-server
   cloud:
     config:
-      name: microservice-config
+      uri: http://localhost:8887
+      name: eureka-server-config
       label: master
 #      profile: dev
       enabled: true
       fail-fast: false
       retry:
         max-attempts: 6
-      discovery:
-        enabled: true
-        service-id: config-server
     bus:
       trace:
         enabled: true
